@@ -4,65 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my landing page</title>
+    <title>Landing page</title>
 </head>
 <body>
-    <section class="hero">
+    <div class="hero__container">
         <header>
-            <nav>
-                <a href="#">Chi<span>Xom</span></a>
-                <ul>
-                    <li>link1</li>
-                    <li>link2</li>
-                    <li>link3</li>
-                </ul>
-            </nav>
+            <div class="header__wrapper">
+                <nav>
+                    <a href="#" class="logo">chi<span>XOM</span></a>
+                    <ul>
+                        <li><a href="#">link1</a></li>
+                        <li><a href="#">link2</a></li>
+                        <li><a href="#">link3</a></li>
+                        <li><a href="#">link4</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <section>
-            <div>
-                <h2>this website is awesome</h2>
-                <p>
-                    this website has sometext that goes here
-                </p>
+        <main>
+            <div class="text__content">
+                <h1>this website is awesome</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sed cum ut maxime cupiditate, illum eius quidem incidunt. Itaque, sunt?</p>
                 <button>sign up</button>
             </div>
-            <div>
+            <div class="image__content">
                 <img src="" alt="">
             </div>
-        </section>
-    </section>
-    <section>
-        <h2>some random info</h2>
-        <div>
-            <div class="card">
-                <img src="" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Eos, mollitia!
-                </p>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Eos, mollitia!
-                </p>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Eos, mollitia!
-                </p>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, 
-                    adipisicing elit. Eos, mollitia!
-                </p>
+        </main>
+    </div>
+    <div class="random__info">
+        <div class="random__info__wrapper">
+            <h2>Some random information</h2>
+            <div class="grid__container">
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="thor__qoute">
+        <div class="thor__qoute__wrapper">
+            <blockquote>
+                this is inspiring quote, or a testimonial from a customer. maybe it's just filling up space, or maybe people will actually read it. who knows? All i know is that it looks nice.
+            </blockquote>
+            <cite>-Thor, God of Thunder</cite>
+        </div>
+    </div>
+    <div class="call__to__action">
+        <div class="call__to__action__wrapper">
+            <div class="cta__text">
+                <h2>call to action! it's time</h2>
+                <p>sign up for our product by clicking that button right over there!</p>
+            </div>
+            <button>sign up</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__wrapper">
+            Copyrights &copy; The Odin Project 2021
+        </div>
+    </footer>
 </body>
 </html>

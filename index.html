@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Landing page</title>
 </head>
 <body>
@@ -13,55 +14,56 @@
                 <nav>
                     <a href="#" class="logo">chi<span>XOM</span></a>
                     <ul>
-                        <li><a href="#">link1</a></li>
-                        <li><a href="#">link2</a></li>
-                        <li><a href="#">link3</a></li>
-                        <li><a href="#">link4</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#random">About</a></li>
+                        <li><a href="#quote">Quote</a></li>
+                        <li><a href="#sign__up">Sign up</a></li>
                     </ul>
+                    <div class="menu__btn ">
+                        <div class="hamburger__menu">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
         <main>
             <div class="text__content">
-                <h1>this website is awesome</h1>
+                <h1>This website is awesome</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sed cum ut maxime cupiditate, illum eius quidem incidunt. Itaque, sunt?</p>
-                <button>sign up</button>
+                <button>Sign up</button>
             </div>
             <div class="image__content">
-                <img src="" alt="">
+                <img src="./images/undraw_birthday_cake_re_bsw5.svg" alt="">
             </div>
         </main>
     </div>
-    <div class="random__info">
+    <div class="random__info" id="random">
         <div class="random__info__wrapper">
             <h2>Some random information</h2>
             <div class="grid__container">
                 <div class="card">
-                    <img src="" alt="">
+                    <img src="./images/undraw_birthday_girl_n46w.svg" alt="">
                     <div class="text">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
                     </div>
                 </div>
                 <div class="card">
-                    <img src="" alt="">
+                    <img src="./images/undraw_birthday_girl_n46w.svg" alt="">
                     <div class="text">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
                     </div>
                 </div>
                 <div class="card">
-                    <img src="" alt="">
+                    <img src="./images/undraw_birthday_girl_n46w.svg" alt="">
                     <div class="text">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
                     </div>
                 </div>
                 <div class="card">
-                    <img src="" alt="">
-                    <div class="text">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="" alt="">
+                    <img src="./images/undraw_birthday_girl_n46w.svg" alt="">
                     <div class="text">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, suscipit.
                     </div>
@@ -69,27 +71,47 @@
             </div>
         </div>
     </div>
-    <div class="thor__qoute">
+    <div class="thor__qoute" id="quote">
         <div class="thor__qoute__wrapper">
             <blockquote>
-                this is inspiring quote, or a testimonial from a customer. maybe it's just filling up space, or maybe people will actually read it. who knows? All i know is that it looks nice.
+                This is inspiring quote, or a testimonial from a customer. maybe it's just filling up space, or maybe people will actually read it. who knows? All i know is that it looks nice.
             </blockquote>
             <cite>-Thor, God of Thunder</cite>
         </div>
     </div>
-    <div class="call__to__action">
+    <div class="call__to__action" id="sign__up">
         <div class="call__to__action__wrapper">
             <div class="cta__text">
-                <h2>call to action! it's time</h2>
+                <h2>Call to action! it's time</h2>
                 <p>sign up for our product by clicking that button right over there!</p>
             </div>
-            <button>sign up</button>
+            <button>sign&nbsp;up</button>
         </div>
     </div>
     <footer>
         <div class="footer__wrapper">
-            Copyrights &copy; The Odin Project 2021
+            Copyrights &copy; The Odin Project <script>document.write(new Date().getFullYear())</script>
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector('.menu__btn')
+        menuBtn.addEventListener('click', ()=>{
+            if(menuBtn.classList.contains('active')){
+                menuBtn.classList.remove('active');
+                document.querySelector('nav ul').classList.remove('active')
+            } else {
+                menuBtn.classList.add('active');
+                document.querySelector('nav ul').classList.add('active')
+            }
+        })
+
+        const links = document.querySelectorAll('ul li a');
+        links.forEach(link => {
+            link.addEventListener('click', ()=>{
+                menuBtn.classList.remove('active');
+                document.querySelector('nav ul').classList.remove('active') 
+            })
+        })
+    </script>
 </body>
 </html>
